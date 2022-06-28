@@ -1,22 +1,22 @@
-function someName(name = 'Ihor') {
-  console.log('Hello ' + name);
+function someName(name = "Ihor") {
+  console.log("Hello " + name);
 }
 
-const someFunc = function (name = 'Ihor') {
-  console.log('Hello Annon ' + name);
+const someFunc = function (name = "Ihor") {
+  console.log("Hello Annon " + name);
 };
 
 someName();
-someFunc('Jhon');
+someFunc("Jhon");
 
 //===================
 
-function sayHello(name = 'Ihor') {
-  return 'Hello ' + name;
+function sayHello(name = "Ihor") {
+  return "Hello " + name;
 }
 
-const result = sayHello('Any text you like');
-console.log(result, sayHello('Name2'), sayHello());
+const result = sayHello("Any text you like");
+console.log(result, sayHello("Name2"), sayHello());
 
 //====================
 
@@ -27,8 +27,8 @@ functionPointer();
 
 function getCount() {
   console.log(arguments);
-  if(!arguments.length) {
-    return 'No arguments';
+  if (!arguments.length) {
+    return "No arguments";
   }
 
   let result = 0;
@@ -64,7 +64,7 @@ getSum(1, 1); // 2
 
 const getSum2 = (a, b) => {
   // no arguments in arrow function !!
-  return a + b
+  return a + b;
 };
 
 console.log(getSum2(2, 4)); // 6
@@ -73,7 +73,7 @@ console.log(getSum2(2, 4)); // 6
 
 const array = [...Array(10)];
 
-const fillRandom = el => {
+const fillRandom = (el) => {
   return Math.floor(Math.random() * 10);
 };
 
@@ -96,27 +96,27 @@ console.log(multiply(10));
 //======================================
 
 function gratingFunction(x, z) {
-  return function (y, f = '------') {
-    return x + y + ' ' + f + z;
+  return function (y, f = "------") {
+    return x + y + " " + f + z;
   };
 }
 
-const grating = gratingFunction('Hello my friend ', ' (^..^)!');
-const names = ['Jhon', 'Ihor', 'Mike'];
+const grating = gratingFunction("Hello my friend ", " (^..^)!");
+const names = ["Jhon", "Ihor", "Mike"];
 
 console.log(grating);
 
-names.forEach(name => {
+names.forEach((name) => {
   console.log(grating(name));
 });
 
-console.log(grating('Jhon', 'Carpenter'));
+console.log(grating("Jhon", "Carpenter"));
 
 //======================================
 
-function outputFunctio (text) {
+function outputFunctio(text) {
   console.log(text);
-};
+}
 
 const outputFunctioAlert = (text) => {
   alert(text);
@@ -141,13 +141,12 @@ function makeFunc() {
 
   return (x) => {
     console.log(x + name);
-  }
-};
+  };
+}
 
 const myFunc = makeFunc();
 //       v-------- is X variable
-myFunc('Chrom');
-
+myFunc("Chrom");
 
 //=======================================
 // recursion
@@ -159,4 +158,4 @@ function pow(x, n) {
   }
 }
 
-console.log( pow(2, 3) ); // 8
+console.log(pow(2, 3)); // 8
